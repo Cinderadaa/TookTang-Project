@@ -1,8 +1,7 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { supabase } from '/src/lib/supabaseClient';
+import { supabase } from '../../src/lib/supabaseClient';
 import Image from 'next/image';
-import Navbar from '/src/compo/Navbar';
 
 export default function DashboardPage() {
   const [bins, setBins] = useState([]);
@@ -38,7 +37,6 @@ export default function DashboardPage() {
     return React.createElement(
       React.Fragment,
       null,
-      React.createElement(Navbar),
       React.createElement('div', { className: 'container' },
         React.createElement('h1', null, '📊 Dashboard'),
         React.createElement('div', { className: 'bin-summary' },
@@ -70,7 +68,6 @@ export default function DashboardPage() {
   return React.createElement(
     React.Fragment,
     null,
-    React.createElement(Navbar),
     React.createElement('div', { className: 'container' },
       React.createElement('h1', null, `🗑️ ${selectedBin.name} (${selectedBin.count} ชิ้น)`),
       React.createElement(
@@ -90,3 +87,5 @@ export default function DashboardPage() {
     )
   );
 }
+
+console.log('🧩 FILE PATH CHECK:', import.meta.url);
