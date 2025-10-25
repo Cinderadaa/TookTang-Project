@@ -1,6 +1,8 @@
 
 import React from 'react';
 import Image from 'next/image';
+// import Navbar from '/compo/Navbar';
+
 
 export default function Page() {
   return React.createElement(

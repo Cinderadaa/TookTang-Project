@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Image from 'next/image';
+// import Navbar from '/compo/Navbar';
+
 
 export default function Page({ searchParams }) {
   const label = searchParams?.label || 'ไม่ทราบ';
